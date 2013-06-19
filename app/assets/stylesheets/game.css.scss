@@ -1,0 +1,56 @@
+// Place all the styles related to the Game controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+/*ЭТО ОРИГИНАЛЬНЫЙ ДИЗАЙН, РУКАМИ НЕ ТРОГАТЬ!*/
+	p{
+		color:blue;
+	}
+
+	h1{
+		font: italic bold 26pt Times;
+		color: #ab69bc;
+		text-align: center;
+	}
+
+	input[type=submit]{
+		padding:20px 40px;
+		background-color: #ffbbff;
+		font: italic bold 16pt Times;
+		text-align: center;
+		margin: 0 30%;
+	}
+
+	td{
+	border:1px solid black;
+	width:30%;
+	text-align: center;
+	}
+
+	th{
+		border:3px solid black;
+		color:black;
+		font:bold 16pt;
+	}
+	table{
+		margin:auto;
+	}
+	span{
+		float:right;
+	}
+	.steak{
+		float:left;
+		width:8px;
+		height:150px;
+		margin:20px 7px;
+		background-color: yellow;
+		border: 2px solid black;
+		display: inline;
+
+	}
+
+	div{
+		xborder: 1px solid black;
+		overflow: auto;
+	}
+

@@ -1,0 +1,22 @@
+<% if (@play==true) %>
+	<%= render 'draw' %>
+	<p>Сервер сделал свой ход. Палочек осталось: <%= params[:steaks] %>
+	Браузер, ходи!</p>
+
+<% else %>
+	<%	if(@winner) %>
+		<h2>ПОБЕДИТЕЛЬ - <%= @winner %>!!!</h2>
+
+		<%= render 'time_and_count' %>
+		<h2>Не хотите сыграть ещё?</h2>
+		<%= render 'submit' %>
+	<% else %>
+		<h1>Вас приветствует игра ПАЛОЧКИ</h1>
+		<%= render 'submit' %>
+		<%= render 'time_and_count' %>
+	<% end %>
+<% end %>
+
+
+<%= javascript_include_tag "main" %>
+

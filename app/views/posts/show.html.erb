@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+<h1>СТАТИСТИКА ИГРЫ № <%= @post.id %></h1>
+
+
+<% render 'who' %>
+
+<p>
+  <b>Winner:</b>
+  <%= who(@post.winner) %>
+</p>
+
+<p>
+  <b>Всего ходов:</b>
+  <%= @post.number %>
+</p>
+
+
+
+<table>
+	<thead><th>Кто ходил</th><th>Сколько взял</th><th>Время хода</th></thead>
+	<%  @post.comments.each do |c| %>	
+	<tr><td><%=  who(c.player) %> </td><td><%=  c.num %> </td> <td><%= c.created_at %></td></tr>
+	<% end %>
+</table>	
+<tab>
+
+
+<br>
+<%= link_to 'Back', '/' %>

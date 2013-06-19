@@ -1,0 +1,24 @@
+<% render 'posts/who' %>
+<style>
+	*{text-align: center;
+		color:#101166;}
+	td:first-child{
+		width:70px;
+	}
+</style>
+
+<h1>Последние игры и количество ходов за каждую из них</h1>
+<table>
+	<thead><th>№ игры</th><th>Дата игры</th><th>Число ходов</th><th>Победитель</th></thead>
+	<%  @posts.each do |post| %>
+	<tr><td><%= post.id %></td><td><%= post.created_at %></td><td><%=  post.number %> </td><td><%= who(post.winner) %><span><%= link_to 'show', post %></span></td>  </tr>
+	<% end %>
+</table>
+
+
+
+
+
+
+
+
